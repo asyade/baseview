@@ -187,6 +187,7 @@ unsafe fn wnd_proc_inner(
                 TrackMouseEvent(&mut track_mouse);
                 *mouse_was_outside_window = false;
 
+                SetFocus(hwnd);
                 let enter_event = Event::Mouse(MouseEvent::CursorEntered);
                 window_state
                     .handler
